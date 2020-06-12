@@ -9,11 +9,11 @@ namespace AnimalShelter.Controller
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class CatController : ControllerBase
+  public class AnimalsController : ControllerBase
   {
     private AnimalShelterContext _db;
 
-    public CatController(AnimalShelterContext db)
+    public AnimalsController(AnimalShelterContext db)
     {
       _db = db;
     }

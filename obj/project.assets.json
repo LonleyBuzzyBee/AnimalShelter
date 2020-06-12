@@ -12450,11 +12450,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maili\\github\\shelter.solution\\AnimalShelter\\AnimalShelter.csproj",
+      "projectUniqueName": "C:\\Users\\maili\\github\\shelter.solution\\animalshelter\\AnimalShelter.csproj",
       "projectName": "AnimalShelter",
-      "projectPath": "C:\\Users\\maili\\github\\shelter.solution\\AnimalShelter\\AnimalShelter.csproj",
+      "projectPath": "C:\\Users\\maili\\github\\shelter.solution\\animalshelter\\AnimalShelter.csproj",
       "packagesPath": "C:\\Users\\maili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maili\\github\\shelter.solution\\AnimalShelter\\obj\\",
+      "outputPath": "C:\\Users\\maili\\github\\shelter.solution\\animalshelter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
