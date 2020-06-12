@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
+using PagedList;
 
 namespace AnimalShelter.Controller
 {
@@ -19,7 +20,7 @@ namespace AnimalShelter.Controller
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Cat>> Get(string gender, string name, int age, bool picUrl, string bio)
+    public ActionResult<IEnumerable<Cat>> Get(string gender, string name, int age, bool picUrl, string bio, int? page)
     {
       var query = _db.Cats.AsQueryable();
       if (gender != null)
@@ -43,8 +44,10 @@ namespace AnimalShelter.Controller
       {
         query = query.Where(entry => entry.Bio == bio);
       }
+      int pageSize = 5;
+      int pageNumber = (page ?? 1);
 
-      return query.ToList();
+      return query.ToPagedList(pageNumber,pageSize).ToList();
     }
 
     [HttpGet("{id}")]
