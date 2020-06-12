@@ -20,12 +20,16 @@ namespace AnimalShelter.Controller
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Cat>> Get(string gender, string name, int age, bool picUrl, string bio, int? page)
+    public ActionResult<IEnumerable<Animal>> Get(string gender,string species, string name, int age, bool picUrl, string bio, int? page)
     {
-      var query = _db.Cats.AsQueryable();
+      var query = _db.Animals.AsQueryable();
       if (gender != null)
       {
         query = query.Where(entry => entry.Gender == gender);
+      }
+      if (species != null)
+      {
+        query = query.Where(entry => entry.Species == species);
       }
       if (name != null)
       {
@@ -51,25 +55,25 @@ namespace AnimalShelter.Controller
     }
 
     [HttpGet("{id}")]
-    public ActionResult<Cat> Get(int id)
+    public ActionResult<Animal> Get(int id)
     {
-      return _db.Cats.FirstOrDefault(entry => entry.CatId == id);
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
 
     // POST api/animals
     [HttpPost]
-    public void Post([FromBody] Cat cat)
+    public void Post([FromBody] Animal animal)
     {
-      _db.Cats.Add(cat);
+      _db.Animals.Add(animal);
       _db.SaveChanges();
     }
 
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] Cat cat)
+    public void Put(int id, [FromBody] Animal animal)
 
     {
-      cat.CatId = id;
-      _db.Entry(cat).State = EntityState.Modified;
+      animal.AnimalId = id;
+      _db.Entry(animal).State = EntityState.Modified;
       _db.SaveChanges();
     }
 
@@ -77,8 +81,8 @@ namespace AnimalShelter.Controller
     public void Delete(int id)
 
     {
-      var catToDelete = _db.Cats.FirstOrDefault(entry => entry.CatId == id);
-      _db.Cats.Remove(catToDelete);
+      var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+      _db.Animals.Remove(animalToDelete);
       _db.SaveChanges();
     }
   }
