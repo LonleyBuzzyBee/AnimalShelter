@@ -8,8 +8,7 @@ namespace AnimalShelter.Models
     {
       this.Animals = new HashSet<AnimalsPreviouslyOwned>();
     }
-    public int OwnerId { get; set; }
-    public string LastOwner { get; set; }
+    public int PreviousOwnerId { get; set; }
     public int TimesReHomed { get; set; }
     public virtual ICollection<AnimalsPreviouslyOwned> Animals{ get; }
   }

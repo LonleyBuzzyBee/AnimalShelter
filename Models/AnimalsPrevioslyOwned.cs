@@ -8,7 +8,7 @@ namespace AnimalShelter.Models
   {
     public int AnimalsPreviouslyOwnedId { get; set; }
     public int AnimalId { get; set; }
-    public int OwnerId { get; set; }
+    public int PreviousOwnerId { get; set; }
 
     public Animal Animal { get; set; }
     public PreviousOwner PreviousOwner { get; set; }

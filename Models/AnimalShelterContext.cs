@@ -8,8 +8,40 @@ namespace AnimalShelter.Models
             : base(options)
         {
         }
-        protected override void OnModelCreating(ModelBuilder builder)
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      builder.Entity<PreviousOwner>()
+      .HasData(
+      // SEED LOCATIONS
+      new PreviousOwner
+      {
+        PreviousOwnerId = 1,
+        TimesReHomed = 0
+      },
+      new PreviousOwner
+      {
+        PreviousOwnerId = 2,
+        TimesReHomed = 1
+      }
+      );
+ 
+      builder.Entity<AnimalsPreviouslyOwned>()
+      .HasData(
+        new AnimalsPreviouslyOwned
         {
+          AnimalsPreviouslyOwnedId = 1,
+          AnimalId = 1,
+          PreviousOwnerId = 1
+        },
+        new AnimalsPreviouslyOwned
+        {
+          AnimalsPreviouslyOwnedId = 2,
+          AnimalId = 9,
+          PreviousOwnerId = 2
+        }
+      );
+
       builder.Entity<Animal>()
           .HasData(
               new Animal
@@ -115,5 +147,7 @@ namespace AnimalShelter.Models
               );
         }
         public DbSet<Animal> Animals { get; set; }
+        public DbSet<PreviousOwner> PreviousOwners { get; set; }
+        public virtual DbSet<AnimalsPreviouslyOwned> AnimalsPreviousOwned { get; set; }
     }
 }
