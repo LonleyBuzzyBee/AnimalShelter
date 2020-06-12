@@ -14,9 +14,12 @@ _This app was designed for Doug's Animal Shelter, to help patrons find out what 
 
 | Behavior | Input | Output |
 |---|---|---|
-|user is able to see animals available |click get, enter fields or leave blank| list of animals meeting search field gets brought up, or all animals if fields left blank |user is able to add an animal|click post and fill out fields|a new animal is created and added to list
-|a user is able to look up a specific animal using id|The user clicks the get button with id field, enter id of specific animal|the animals information is then displayed in swagger||
+|user is able to see animals available |click get, enter fields or leave blank|list of animals meeting search field gets brought up, or all animals if fields left blank |
+|user is able to add an animal|click post and fill out fields|a new animal is created and added to list|
+|a user is able to look up a specific animal using id|The user clicks the get button with id field, enter id of specific animal|the animals information is then displayed in swagger|
 |a user is able to edit an existing animal|click put and then enter new info into fields|specific animal is now updated with new info|
+||||
+
 
 ## Setup/Installation Requirements
 
