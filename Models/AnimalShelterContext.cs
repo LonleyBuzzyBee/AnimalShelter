@@ -141,13 +141,13 @@ namespace AnimalShelter.Models
                  PicUrl = "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/pearl_16x9.jpg?itok=jZ8iPy1q",
                  Gender = "Female",
                  Species = "Dog",
-                 Bio = "I have ever seen doing me a frighten, smol. Fluffer the neighborhood pupper vvv borking doggo shibe wow such tempt, sub woofer he made many woofs dat tungg tho."
+                 Bio = "I have ever seen doing me a frighten, smol. Fluffer the neighborhood pupper vvv borking doggo shibe wow such tempt, sub woofer he made many woofs dat tungg tho.",
                 }
           
               );
         }
         public DbSet<Animal> Animals { get; set; }
         public DbSet<PreviousOwner> PreviousOwners { get; set; }
-        public virtual DbSet<AnimalsPreviouslyOwned> AnimalsPreviousOwned { get; set; }
+        public virtual DbSet<AnimalsPreviouslyOwned> AnimalsPreviouslyOwned { get; set; }
     }
 }
