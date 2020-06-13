@@ -18,7 +18,7 @@ _This app was designed for Doug's Animal Shelter, to help patrons find out what 
 |user is able to add an animal|click post and fill out fields|a new animal is created and added to list|
 |a user is able to look up a specific animal using id|The user clicks the get button with id field, enter id of specific animal|the animals information is then displayed in swagger|
 |a user is able to edit an existing animal|click put and then enter new info into fields|specific animal is now updated with new info|
-||||
+|a user is able to delete a specific animal|click delete then enter animalid|refresh get for list of animals, and they should be removed|
 
 
 ## Setup/Installation Requirements
@@ -44,9 +44,17 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 
 ## Technologies Used
 
-_C#_
-_Asp.Net Core 2.2 WebApi_
-_Entity_
+* _C#_
+* _Asp.Net Core 2.2 WebApi_
+* _Entity_
+
+## Refrenced these sites
+
+* _used to set up swagger_
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-3.1
+
+* _used to set up pagination_
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 
 ### License
 
