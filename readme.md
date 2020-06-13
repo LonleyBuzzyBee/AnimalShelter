@@ -48,7 +48,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _Asp.Net Core 2.2 WebApi_
 * _Entity_
 
-## Refrenced these sites
+## Referenced these sites
 
 * _used to set up swagger_
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-3.1
